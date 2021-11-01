@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Loading page 4 </title>
+</head>
+<body>
+	<div class="welcome">
+		<h1>Welcome</h1>
+	</div>
+	<section>
+		<div class="loader"></div>
+		<div class="count"></div>
+	</section>
+
+    <footer>
+            		Guided by:  <a target="_blank" href="www.ermile.com"> ONLINE TUTORIAL  </a>
+              <br>
+          		Designed by <a target="_blank" href="www.hayate-ensani.com">Mohammad amin Mashayekhan</a>
+    </footer>
+
+
+    <script src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+    	$(document).ready(function(){
+    		var count = 0;
+    		var counter = setInterval(function(){
+    			if (count < 101) {
+    			   	 $('.count').text(count + '%');
+    				 $('.loader').css('width' , count + '%');
+    				count++
+    			}
+    			else{
+    				clearInterval(counter)
+    			}
+    		},80)
+    	})
+    </script>
+</body>
+</html>
